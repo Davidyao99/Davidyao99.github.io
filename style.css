@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Light background similar to example */
+    color: #333; /* Dark text for contrast */
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff; /* White content area background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #f8f9fa; /* Lighter background for sidebar */
+    padding: 30px;
+    color: #333;
+    text-align: center;
+    flex-shrink: 0;
+    border-right: 1px solid #e0e0e0; /* Subtle separator */
+}
+
+.profile-pic-container {
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff; /* A blue accent color */
+}
+
+.sidebar-name {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sidebar-bio {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list li i {
+    margin-right: 15px;
+    color: #007bff; /* Blue accent color for icons */
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar .contact-list a {
+    color: #333; /* Match sidebar text color */
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.sidebar .contact-list a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #ffffff; /* Main content background */
+}
+
+.content h1, .content h2 {
+    color: #007bff; /* Blue accent color for headings */
+    border-bottom: 1px solid #e0e0e0; /* Lighter separator */
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.content h1:first-child {
+    margin-top: 0;
+}
+
+.content p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.content a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* New styles for CV content */
+.publication-item {
+    display: flex; /* Use flexbox for image and text side-by-side */
+    margin-bottom: 18px; /* reduced from 30px */
+    align-items: flex-start; /* Align items to the top */
+    line-height: 0.8; /* reduced line height for less vertical spacing */
+}
+
+.publication-thumbnail {
+    width: 250px; /* Fixed width for the image */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.publication-details {
+    flex-grow: 1;
+}
+
+.publication-details h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.publication-details .authors {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.publication-details .authors a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.publication-details .authors a:hover {
+    text-decoration: underline;
+}
+
+.publication-details .venue {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.publication-details .links a {
+    margin-right: 15px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.publication-details .links a:hover {
+    text-decoration: underline;
+}
+
+.publication-details .abstract {
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 15px;
+}
+
+
+.job {
+    margin-bottom: 25px;
+}
+
+.job p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.job p strong {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.job p em {
+    color: #555;
+    font-style: italic;
+}
+
+.content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #333;
+}
+
+.content li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+        order: 1;
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .sidebar-bio {
+        text-align: center;
+    }
+
+    .contact-list {
+        text-align: left;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .content {
+        padding: 20px;
+        order: 2;
+    }
+
+    .publication-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .publication-thumbnail {
+        width: 100%; /* Make thumbnail full width on small screens */
+        max-width: 250px; /* But keep a max width */
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .publication-details .links a {
+        display: block; /* Stack links vertically */
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
